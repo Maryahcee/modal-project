@@ -1,16 +1,22 @@
 <template>
- <h1>{{title}}</h1>
+ <h1>{{ title  }}</h1>
+<Modal :header="header" :text="text" theme="sale"/>
 </template>
 
 <script>
+import Modal from './components/Modal.vue'
 
 export default {
   name: 'App',
+  components: { Modal },
   data() {
     return{
-      title: 'My first Vue App'
+      title: 'My first Vue App',
+      header: 'Sign up for the Giveaway!',
+      text: 'Grab up your swag pop!'
     }
-  }
+  },
+ 
 }
 </script>
 
@@ -22,5 +28,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1{
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 </style>
